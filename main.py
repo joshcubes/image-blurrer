@@ -1,7 +1,9 @@
 from skimage.io import imread, imsave
-inimage = imread(input("Please enter the filename of the image: "))
+
+inimage = imread(input("Please enter the filename of the Bitmap Image: "))
 iterations = int(input("How many iterations?: "))
-output_name = input("What would you like the output to be called?: ")
+output_name = input("What would you like the output file to be named?: ")
+output_name += ".bmp"
 i = 0
 currentpercent = 0
 
@@ -131,7 +133,7 @@ def blur_pixel(x,y, IMG_X, IMG_Y, IMAGE):
     output = [red,green,blue]
     return output
 
-def blur(image, it, its):
+def blur_image(image, it, its):
     newimage = image
     IMAGE_X = len(image[0])
     IMAGE_Y = len(image)
@@ -159,7 +161,7 @@ def blur(image, it, its):
 
 while i in range(0,iterations):
     i += 1
-    inimage = blur(inimage, i, iterations)
+    inimage = blur_image(inimage, i, iterations)
 
 imsave(output_name, inimage)
 
