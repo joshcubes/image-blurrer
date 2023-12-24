@@ -5,7 +5,7 @@ I made an image blurrer because i got bored
 
 
 ## Dependencies
-- [Skimage](https://pypi.org/project/scikit-image/)
+- [Scikit-image](https://pypi.org/project/scikit-image/)
 ## Usage/Examples
 
 General Usage:
